@@ -21,8 +21,11 @@ jobs:
         distribution: 'temurin'
     - name: Build dependencies with Maven
       run: mvn clean install 
+    - name: avn clean
+      run : mvn clean package
+    - name: mvn test
+      run: mvn test
+    - name: mvn deploy
+      run: mvn deploy
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    
-    - name: Setup Docker Build
-      run: docker/setup-buildx-action@v1
