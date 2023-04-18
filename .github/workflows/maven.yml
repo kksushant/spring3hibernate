@@ -23,3 +23,6 @@ jobs:
       run: mvn clean install 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    
+    - name: Setup Docker Build
+      run: docker/setup-buildx-action@v1
