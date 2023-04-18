@@ -18,6 +18,7 @@ jobs:
       with:
         java-version: '18'
         cache: maven
+        distribution: 'temurin'
     - name: Build dependencies with Maven
       run: mvn clean install 
     - name: Build with Maven
